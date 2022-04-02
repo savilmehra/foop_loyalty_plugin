@@ -1,0 +1,64 @@
+{
+  "rows": [
+
+    {
+      "title":"Invite Co-workers",
+      "code": "inviteCoworkers",
+      "imageUrl": "assets/appimages/wedding-invitation.png",
+      "tag": "",
+      "isTagVisible": false
+    },
+
+    {
+      "title":"Invite Co-workers via Whatsapp",
+      "code": "Whatsapp",
+      "imageUrl": "assets/appimages/whatsapp.png",
+      "tag": "",
+      "isTagVisible": false
+    },
+    {
+      "title":"Invite Co-workers from phonebook",
+      "code": "phonebook",
+      "imageUrl": "phone",
+      "tag": "icon",
+      "isTagVisible": false
+    },
+    {
+      "title":"Share an invite link",
+      "code": "link",
+      "imageUrl": "share",
+      "tag": "icon",
+      "isTagVisible": false
+    },
+    {
+      "title":"",
+      "code": "copylink",
+      "imageUrl": "share",
+      "tag": "icon",
+      "isTagVisible": false
+    },
+
+    {
+      "title":"1. Users invited through “Code” do not need approval  ",
+      "code": "copy_link",
+      "imageUrl": "share",
+      "tag": "text",
+      "isTagVisible": false
+    },
+    {
+      "title":"2. Users having a similar business domain email, do not need an approval.",
+      "code": "copy_link",
+      "imageUrl": "share",
+      "tag": "text",
+      "isTagVisible": false
+    },
+    {
+      "title":"3. Users invited through ‘Links’ will be able to join your business network only after approval by admin.",
+      "code": "copy_link",
+      "imageUrl": "share",
+      "tag": "text",
+      "isTagVisible": false
+    }
+
+  ]
+}

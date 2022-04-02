@@ -1,0 +1,106 @@
+{
+
+  "rows": [
+    {
+      "title": "position_0"
+    },
+    {
+      "title": "position_1"
+    },
+    {
+      "title": "position_2"
+    },
+    {
+      "title": "position_3"
+    },
+    {
+      "title": "सहयोग",
+      "data": [
+        {
+          "title": "ड्रॉप-इन मीटिंग",
+          "description": "कुछ भी करते समय ऑडियो-वीडियो-चैट",
+          "code": "talks",
+          "imageUrl": "assets/appimages/menu-audio-chat.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "ब्रांड ड्राइव",
+          "description": "फूप ड्राइव",
+          "code": "drive",
+          "imageUrl": "assets/appimages/cloud-drive.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+
+    {
+      "title": "प्रशिक्षण और कार्यक्रम",
+      "data": [
+        {
+          "title": "प्रशिक्षण",
+          "description": "अपने काम के बारे में सब कुछ यहां जानें",
+          "code": "lesson",
+          "imageUrl": "assets/appimages/menu-training.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "पंचांग",
+          "description": "पंचांग",
+          "code": "calendar",
+          "imageUrl": "assets/appimages/calendar.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+
+    {
+      "title": "टीम प्रबंधन",
+      "data": [
+        {
+          "title": "टीम",
+          "description": "आपके सभी सहकर्मी एक ही स्थान पर",
+          "code": "myteam",
+          "imageUrl": "assets/appimages/menu-team.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "कमरा",
+          "description": "कमरे, समूहों में कुछ भी चर्चा करें",
+          "code": "room",
+          "imageUrl": "assets/appimages/menu-rooms.png",
+          "tag": "",
+
+          "isTagVisible": false
+        }
+
+      ]
+    },
+
+    {
+      "title": "अन्य",
+      "data": [
+        {
+          "title": "समायोजन",
+          "description": "यहां अपना खाता प्रबंधित करें",
+          "code": "settings",
+          "imageUrl": "assets/appimages/menu-settings.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "लॉग आउट",
+          "description": "आप कभी भी लॉगआउट नहीं करना चाहेंगे",
+          "code": "logout",
+          "imageUrl": "assets/appimages/menu-logout.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    }
+  ]
+}

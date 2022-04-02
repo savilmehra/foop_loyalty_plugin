@@ -1,0 +1,27 @@
+{
+  "rows": [
+
+    {
+      "title":"Invite Partners",
+      "code": "inviteCoworkers",
+      "imageUrl": "assets/appimages/handshake.png",
+      "tag": "",
+      "isTagVisible": false
+    },
+    {
+      "title":"Invite Partners from phonebook",
+      "code": "phonebook",
+      "imageUrl": "phone",
+      "tag": "icon",
+      "isTagVisible": false
+    },
+    {
+      "title":"1. Partners invited through admission code do not need approval.",
+      "code": "copy_link",
+      "imageUrl": "share",
+      "tag": "text",
+      "isTagVisible": false
+    }
+
+  ]
+}

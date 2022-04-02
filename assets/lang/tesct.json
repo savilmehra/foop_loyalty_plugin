@@ -1,0 +1,27 @@
+{
+  "invitePartners": [
+
+    {
+      "title": "شراکت داروں کو مدعو کریں۔",
+      "code": "inviteCoworkers",
+      "imageUrl": "assets/appimages/handshake.png",
+      "tag": "",
+      "isTagVisible": false
+    },
+    {
+      "title": "فون بک سے شراکت داروں کو مدعو کریں۔",
+      "code": "phonebook",
+      "imageUrl": "phone",
+      "tag": "icon",
+      "isTagVisible": false
+    },
+    {
+      "title": "1. \"کوڈ\" کے ذریعے مدعو کیے گئے شراکت داروں کو منظوری کی ضرورت نہیں ہے۔",
+      "code": "copy_link",
+      "imageUrl": "share",
+      "tag": "text",
+      "isTagVisible": false
+    }
+
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "rows": [
+    {
+      "title": "position_0"
+    },
+    {
+      "title": "position_1"
+    },
+    {
+      "title": "position_2"
+    },
+    {
+      "title": "position_3"
+    },
+    {
+      "title": "సహకారం",
+      "data": [
+        {
+          "title": "డ్రాప్-ఇన్ సమావేశాలు",
+          "description": "ఏదైనా చేస్తున్నప్పుడు ఆడియో-వీడియో-చాట్",
+          "code": "talks",
+          "imageUrl": "assets/appimages/menu-audio-chat.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "బ్రాండ్ డ్రైవ్",
+          "description": "ఫూప్ డ్రైవ్",
+          "code": "drive",
+          "imageUrl": "assets/appimages/cloud-drive.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+
+    {
+      "title": "శిక్షణ & ఈవెంట్‌లు",
+      "data": [
+        {
+          "title": "శిక్షణ",
+          "description": "మీ పని గురించి ఇక్కడ ప్రతిదీ తెలుసుకోండి",
+          "code": "lesson",
+          "imageUrl": "assets/appimages/menu-training.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "క్యాలెండర్",
+          "description": "క్యాలెండర్",
+          "code": "calendar",
+          "imageUrl": "assets/appimages/calendar.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+
+    {
+      "title": "జట్టు నిర్వహణ",
+      "data": [
+        {
+          "title": "జట్టు",
+          "description": "మీ సహోద్యోగులందరూ ఒకే చోట",
+          "code": "myteam",
+          "imageUrl": "assets/appimages/menu-team.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "గదులు",
+          "description": "గదులు, గుంపులుగా ఏదైనా చర్చించండి",
+          "code": "room",
+          "imageUrl": "assets/appimages/menu-rooms.png",
+          "tag": "",
+
+          "isTagVisible": false
+        }
+
+      ]
+    },
+
+    {
+      "title": "ఇతరులు",
+      "data": [
+        {
+          "title": "సెట్టింగ్‌లు",
+          "description": "మీ ఖాతాను ఇక్కడ నిర్వహించండి",
+          "code": "settings",
+          "imageUrl": "assets/appimages/menu-settings.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "లాగ్అవుట్",
+          "description": "మీరు ఎప్పటికీ లాగ్ అవుట్ చేయకూడదనుకుంటారు",
+          "code": "logout",
+          "imageUrl": "assets/appimages/menu-logout.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    }
+  ]
+}

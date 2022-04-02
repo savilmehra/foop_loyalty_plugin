@@ -1,0 +1,125 @@
+{
+  "rows": [
+    {
+      "title": "position_0"
+    },
+    {
+      "title": "position_1"
+    },
+    {
+      "title": "position_2"
+    },
+    {
+      "title": "position_3"
+    },
+    {
+      "title": "اشتراک",
+      "data": [
+        {
+          "title": "ڈراپ ان میٹنگز",
+          "description": "کچھ بھی کرتے وقت آڈیو-ویڈیو چیٹ",
+          "code": "talks",
+          "imageUrl": "assets/appimages/menu-audio-chat.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "برانڈ ڈرائیو",
+          "description": "فوپ ڈرائیو",
+          "code": "drive",
+          "imageUrl": "assets/appimages/cloud-drive.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+
+    {
+      "title": "تربیت اور تقریبات",
+      "data": [
+        {
+          "title": "تربیت",
+          "description": "یہاں اپنے کام کے بارے میں سب کچھ جانیں۔",
+          "code": "lesson",
+          "imageUrl": "assets/appimages/menu-training.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "کیلنڈر",
+          "description": "کیلنڈر",
+          "code": "calendar",
+          "imageUrl": "assets/appimages/calendar.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+
+    {
+      "title": "ٹیم مینجمنٹ",
+      "data": [
+        {
+          "title": "ٹیم",
+          "description": "آپ کے تمام ساتھی کارکن ایک جگہ پر",
+          "code": "myteam",
+          "imageUrl": "assets/appimages/menu-team.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "کمرے",
+          "description": "کمرے، گروپس میں کسی بھی چیز پر بات کریں۔",
+          "code": "room",
+          "imageUrl": "assets/appimages/menu-rooms.png",
+          "tag": "",
+
+          "isTagVisible": false
+        }
+
+      ]
+    },
+    {
+      "title": "دعوتیں",
+      "data": [
+        {
+          "title": "ساتھی کارکنوں کو مدعو کریں۔",
+          "description": "اپنے ساتھی کارکنوں کو مدعو کریں۔",
+          "code": "invite",
+          "imageUrl": "assets/appimages/wedding-invitation.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "شراکت داروں کو مدعو کریں۔",
+          "description": "اپنے شراکت داروں کو مدعو کریں۔",
+          "code": "invite_partner",
+          "imageUrl": "assets/appimages/invite_partners.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+    {
+      "title": "دوسرے",
+      "data": [
+        {
+          "title": "ترتیبات",
+          "description": "یہاں اپنے اکاؤنٹ کا نظم کریں۔",
+          "code": "settings",
+          "imageUrl": "assets/appimages/menu-settings.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "لاگ آوٹ",
+          "description": "آپ کبھی بھی لاگ آؤٹ نہیں کرنا چاہیں گے۔",
+          "code": "logout",
+          "imageUrl": "assets/appimages/menu-logout.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    }
+  ]
+}
