@@ -5,9 +5,10 @@ import 'dart:io';
 
 
 import 'package:flutter/material.dart';
-import 'package:foop_loyalty_plugin/utils/localization.dart';
 
 import 'package:http/http.dart' as http;
+import 'package:foop_loyalty_plugin/utils/localization.dart';
+import 'package:foop_loyalty_plugin/utils/locator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 

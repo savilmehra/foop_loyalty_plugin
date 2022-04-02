@@ -9,6 +9,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:html/parser.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
 import 'package:foop_loyalty_plugin/NetworkFile/calls.dart';
+import 'package:foop_loyalty_plugin/bloc/rewards_module/pages/postrecieverlistpage.dart';
 import 'package:foop_loyalty_plugin/models/postcreate.dart';
 import 'package:foop_loyalty_plugin/models/postlist.dart';
 import 'package:foop_loyalty_plugin/utils/appAttachmentComponent.dart';
@@ -332,7 +333,7 @@ if(type!="answer")
                 isSavingDraft
                     ? Container(
                         margin: const EdgeInsets.only(right: 16),
-                        child: Center(
+                        child: const Center(
                           child: SizedBox(
                             height: 20,
                             width: 20,
@@ -342,7 +343,37 @@ if(type!="answer")
                       )
                     : appTextButton(
                         onPressed: () async {
-                          if (widget.isWelcomeMessage) {
+                          String html = await _controller.getText();
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(
+                              builder: (context) =>
+                                  PostReceiverListPage(
+                                    type: "post",
+                                    payload: getPostPayload(
+                                      html,
+                                      title,
+                                      subTitle,
+                                      attachmentKey
+                                          .currentState!.mediaList,
+                                    ),
+                                    callBack: () {
+                                      if (widget.callBack != null)
+                                        widget.callBack!();
+                                    },
+
+                                  )))
+                              .then((value) {
+                            if (value != null) {
+
+                              Navigator.of(context).pop({'payload': value["payload"]});
+
+                            }
+                          });
+
+
+
+
+                          /*if (widget.isWelcomeMessage) {
                             String html = await _controller.getText();
                             if (html.trim().isNotEmpty && title!.isNotEmpty) {
 
@@ -370,7 +401,7 @@ if(type!="answer")
                                     HexColor(AppColors.information));
                               }
                             }
-                          }
+                          }*/
                           },
                         child: Wrap(
                           direction: Axis.horizontal,

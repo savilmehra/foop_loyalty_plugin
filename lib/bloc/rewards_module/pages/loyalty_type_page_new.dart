@@ -391,9 +391,11 @@ class LoyaltyTypePageNewState extends State<LoyaltyTypePageNew> {
                         isEdit: true,
                       )))
                       .then((value) => {
-                    if (value != null && value['postData'] != null)
-                      {}
-                     // createPost(value['postData'], item?.id, "active")
+                    if (value != null && value['payload'] != null)
+                      {
+                       // createPost(value['payload'])
+                      }
+
                   });
                 },
 

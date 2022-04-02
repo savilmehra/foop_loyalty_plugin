@@ -24,8 +24,9 @@ class BasicInfo {
   final String LOYALTY_TYPE_ADD = '/api/v1/standard/loyaltytype/customize';
   final String LOYALTY_PROGRAM_LIST = '/api/v1/business/loyalty/program/list';
   final String LOYALTY_TYPE_LIST = '/api/v1/standard/loyaltyprogramtype/list';
-
-
+  final String POST_RECEIVER_LIST = '/api/v2/utility/recipienttype/list';
+  final String PERSON_LIST = '/api/v1/standard/persontype/list';
+  final String COUNTRY_LIST_RECEIVERS = '/api/v1/business/partner/addresss/entities';
 
   final String LOYALTY_LIST='/api/v1/standard/loyaltytype/list';
 
