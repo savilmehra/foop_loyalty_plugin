@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:foop_loyalty_plugin/NetworkFile/calls.dart';
 import 'package:foop_loyalty_plugin/bloc/states/main_state.dart';
 import 'package:foop_loyalty_plugin/bloc/states/states.dart';
+import 'package:foop_loyalty_plugin/models/create_rewards_reponse.dart';
 import 'package:foop_loyalty_plugin/models/welcomeMessagesListResponse.dart';
 import 'package:foop_loyalty_plugin/utils/basicInfo.dart';
 
@@ -14,8 +15,8 @@ class CubitMain extends Cubit<MainState> {
   BasicInfo? basicInfo = BasicInfo();
 
   Future<void> createPost(String body, String refresh, BuildContext ctx) async {
-    var res = await Calls().call(body, ctx, basicInfo!.CREATE_WELCOME_MESSAGE);
-    var data = WelcomeMessagesListResponse.fromJson(res);
+    var res = await Calls().call(body, ctx, basicInfo!.createRewards);
+    var data = CreateRewardResponse.fromJson(res);
     if (data.statusCode == basicInfo!.statusCode) {
       emit(LoadingState());
       getWelcomeMessagesData(refresh, ctx);
@@ -23,7 +24,7 @@ class CubitMain extends Cubit<MainState> {
   }
 
   Future<void> getWelcomeMessagesData(String body, BuildContext ctx) async {
-    var res = await Calls().call(body, ctx, basicInfo!.WELCOME_MESSAGE_LIST);
+    var res = await Calls().call(body, ctx, basicInfo!.welcomeMessage);
     var data = WelcomeMessagesListResponse.fromJson(res);
     if (data.statusCode == basicInfo!.statusCode) {
       data.rows != null && data.rows!.isNotEmpty
@@ -83,6 +84,50 @@ class CubitMain extends Cubit<MainState> {
           redemptionCoins: coins));
     }
   }
+
+
+  Future<void> updateGiftCashCoins(int cash, int coins) async {
+    final currentState = state;
+
+    if (currentState is Loaded) {
+      emit(Loaded(
+          list: currentState.list,
+          isLastPage:currentState.isLastPage,
+          selectedItem: currentState.selectedItem,
+          cash: currentState.cash,
+          coins: currentState.coins,
+          redemptionPercentage: currentState.redemptionPercentage,
+          redemptionCoins: currentState.redemptionCoins,
+          giftCash: cash,
+          giftCoin: coins
+
+
+
+      ));
+    }
+  }
+
+  Future<void> updateStartEndTime(int startTime, int? endTime) async {
+    final currentState = state;
+
+    if (currentState is Loaded) {
+      emit(Loaded(
+          list: currentState.list,
+          isLastPage:currentState.isLastPage,
+          selectedItem: currentState.selectedItem,
+          cash: currentState.cash,
+          coins: currentState.coins,
+          redemptionPercentage: currentState.redemptionPercentage,
+          redemptionCoins: currentState.redemptionCoins,
+          giftCash: currentState.giftCash,
+          giftCoin: currentState.giftCoin
+
+
+
+      ));
+    }
+  }
+
 
   Future<void> search(
       String body, BuildContext ctx, String url, Item getItem) async {

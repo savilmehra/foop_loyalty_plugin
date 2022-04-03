@@ -502,7 +502,7 @@ class _PostCardMedia extends State<PostCardMedia> {
       "page_size": 5,
       "page_number": page
     });
-    var res = await Calls().call(body, context, basicInfo!.MEDIA_FILES);
+    var res = await Calls().call(body, context, basicInfo!.mediaFiles);
     return MediaFiles.fromJson(res);
   }
 

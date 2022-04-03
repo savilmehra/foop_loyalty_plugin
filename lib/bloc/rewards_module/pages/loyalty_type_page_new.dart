@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:foop_loyalty_plugin/bloc/common_widgets/common_list_tile.dart';
@@ -12,6 +13,8 @@ import 'package:foop_loyalty_plugin/bloc/rewards_module/pages/set_loyalty_detail
 import 'package:foop_loyalty_plugin/bloc/states/main_state.dart';
 import 'package:foop_loyalty_plugin/bloc/states/states.dart';
 import 'package:foop_loyalty_plugin/models/LoyaltyTypeList.dart';
+import 'package:foop_loyalty_plugin/models/create_post_payload.dart';
+import 'package:foop_loyalty_plugin/models/postcreate.dart';
 import 'package:foop_loyalty_plugin/utils/app_buttons.dart';
 import 'package:foop_loyalty_plugin/utils/basicInfo.dart';
 import 'package:foop_loyalty_plugin/utils/colors.dart';
@@ -42,7 +45,9 @@ class LoyaltyTypePageNewState extends State<LoyaltyTypePageNew> {
   String? searchValue;
   LoyaltyTypeItem? selectedItem;
   BasicInfo? basicInfo = BasicInfo();
-
+  late Loaded loadedSate;
+   CreateRewardPayload    rewardsData=CreateRewardPayload();
+  RedemptionDetails rewardsDatails=RedemptionDetails();
   SharedPreferences? prefs = locatorRewards<SharedPreferences>();
   late BuildContext ctx;
 
@@ -52,7 +57,7 @@ class LoyaltyTypePageNewState extends State<LoyaltyTypePageNew> {
         if (scrollController.position.pixels != 0) {
           if (!isLastPage) {
             BlocProvider.of<CubitMain>(ctx).loadPage(
-                getBody(), ctx, basicInfo!.LOYALTY_TYPE_LIST, getData);
+                getBody(), ctx, basicInfo!.loyaltyTypeList, getData);
           }
         }
       }
@@ -78,7 +83,7 @@ class LoyaltyTypePageNewState extends State<LoyaltyTypePageNew> {
     setupScrollController();
     WidgetsBinding.instance!.addPostFrameCallback((_) {
       BlocProvider.of<CubitMain>(context)
-          .loadPage(getBody(), context, basicInfo!.LOYALTY_TYPE_LIST, getData);
+          .loadPage(getBody(), context, basicInfo!.loyaltyTypeList, getData);
     });
 
     super.initState();
@@ -181,64 +186,35 @@ class LoyaltyTypePageNewState extends State<LoyaltyTypePageNew> {
       ),
       body: Stack(
         children: <Widget>[
-          Container(
-              child: NestedScrollView(
-                  headerSliverBuilder:
-                      (BuildContext context, bool innerBoxIsScrolled) {
-                    return [
-                      SliverToBoxAdapter(
-                        child: SearchBox(
-                          onvalueChanged: (s) {
-                            searchValue = s;
-                            BlocProvider.of<CubitMain>(ctx).page = 1;
-                            s.isNotEmpty
-                                ? BlocProvider.of<CubitMain>(ctx).search(
-                                    getBody(),
-                                    ctx,
-                                    basicInfo!.LOYALTY_TYPE_LIST,
-                                    getData)
-                                : BlocProvider.of<CubitMain>(ctx).loadPage(
-                                    getBody(),
-                                    ctx,
-                                    basicInfo!.LOYALTY_TYPE_LIST,
-                                    getData);
-                          },
-                          hintText:
-                              AppLocalizations.of(context)!.translate('search'),
-                        ),
-                      ),
-                    ];
-                  },
-                  body: _getBody())),
-          Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                height: 60,
-                color: HexColor(AppColors.appColorWhite),
-                child: Align(
-                    alignment: Alignment.centerRight,
-                    child: Container(
-                      margin: const EdgeInsets.only(left: 16.0, right: 16.0),
-                      child: AppButtonCommon(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18.0),
-                            side: BorderSide(
-                                color: HexColor(AppColors.appMainColor))),
-                        onPressed: () async {
-                          if (selectedItem != null) {
-                            Navigator.of(context).pop({'result': selectedItem});
-                          }
-                        },
-                        color: HexColor(AppColors.appColorWhite),
-                        child: Text(
-                          AppLocalizations.of(context!)!.translate('next'),
-                          style: styleElements
-                              .headline6ThemeScalableW(context)
-                              .copyWith(color: HexColor(AppColors.blueApp)),
-                        ),
-                      ),
-                    )),
-              ))
+          NestedScrollView(
+              headerSliverBuilder:
+                  (BuildContext context, bool innerBoxIsScrolled) {
+                return [
+                  SliverToBoxAdapter(
+                    child: SearchBox(
+                      onvalueChanged: (s) {
+                        searchValue = s;
+                        BlocProvider.of<CubitMain>(ctx).page = 1;
+                        s.isNotEmpty
+                            ? BlocProvider.of<CubitMain>(ctx).search(
+                                getBody(),
+                                ctx,
+                                basicInfo!.loyaltyTypeList,
+                                getData)
+                            : BlocProvider.of<CubitMain>(ctx).loadPage(
+                                getBody(),
+                                ctx,
+                                basicInfo!.loyaltyTypeList,
+                                getData);
+                      },
+                      hintText:
+                          AppLocalizations.of(context)!.translate('search'),
+                    ),
+                  ),
+                ];
+              },
+              body: _getBody()),
+
         ],
       ),
     );
@@ -246,6 +222,9 @@ class LoyaltyTypePageNewState extends State<LoyaltyTypePageNew> {
 
   Widget _getBody() {
     return BlocBuilder<CubitMain, MainState>(builder: (context, state) {
+
+
+
       if (state is LoadingStatePagination && state.isFirstFetch) {
         return LoadingIndicator();
       }
@@ -254,6 +233,7 @@ class LoyaltyTypePageNewState extends State<LoyaltyTypePageNew> {
         list = state.list;
         isLoading = true;
       } else if (state is Loaded) {
+        loadedSate=state;
         list = state.list;
         isLastPage = state.isLastPage;
         selectedItem = state.selectedItem;
@@ -343,7 +323,7 @@ class LoyaltyTypePageNewState extends State<LoyaltyTypePageNew> {
                 ),
                 title: AppLocalizations.of(context)!.translate("mng_gft"),
                 nextCallBack: (percentage, coin) {
-                  BlocProvider.of<CubitMain>(ctx).updateDiscountCouponDeatails(percentage, coin);
+                  BlocProvider.of<CubitMain>(ctx).updateGiftCashCoins(percentage, coin);
                   openManageDateTime();
                 },
                 subTitle: AppLocalizations.of(context)!.translate("pg_jj"),
@@ -377,7 +357,7 @@ class LoyaltyTypePageNewState extends State<LoyaltyTypePageNew> {
                 nextCallBack: (selectedStartDate,selectedStartTime,selectedEndDate,selectedEndTime) {
 
 
-
+                  BlocProvider.of<CubitMain>(ctx).updateGiftCashCoins(0, 0);
 
                   Navigator.of(context)
                       .push(MaterialPageRoute(
@@ -393,7 +373,29 @@ class LoyaltyTypePageNewState extends State<LoyaltyTypePageNew> {
                       .then((value) => {
                     if (value != null && value['payload'] != null)
                       {
-                       // createPost(value['payload'])
+
+
+                        rewardsDatails.giftCash=loadedSate.giftCash,
+                        rewardsDatails.giftCoinsForCash=loadedSate.giftCoin,
+                        rewardsDatails.couponDiscountPercentage=loadedSate.redemptionPercentage,
+                        rewardsDatails.couponCoinsForDiscountPercentage=loadedSate.redemptionCoins,
+                        rewardsData.standardLoyaltyProgramTypesId = loadedSate.selectedItem.loyaltyTypeId,
+                        rewardsData.startDatetime = loadedSate.startEpoch,
+                        rewardsData.endDatetime = loadedSate.endEpoch,
+                        rewardsData.incentiveCash = loadedSate.cash,
+                        rewardsData.incentiveCoins = loadedSate.coins,
+                        rewardsData.incentiveCurrency = "INR",
+                        rewardsData.status = "active",
+                        rewardsData.businessId = basicInfo!.businessId,
+                        rewardsData.redemptionDetails = rewardsDatails,
+                        rewardsData.mediaUrls = value['payload'].mediaDetails,
+                        rewardsData.title = value['payload'].contentMeta.title,
+                        rewardsData.subtitle = value['payload'].contentMeta.meta,
+                        rewardsData.recipientType = value['payload'].postRecipientType,
+                        rewardsData.recipientDetails = value['payload'].postRecipientDetails,
+
+
+                      Navigator.of(ctx).pop({'payload': rewardsData})
                       }
 
                   });

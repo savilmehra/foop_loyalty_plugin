@@ -878,7 +878,7 @@ if(type!="answer")
   void createPost(PostCreatePayload payload) async {
     if (payload.id != null) payload.postStatus = "posted";
     var body = jsonEncode(payload);
-    Calls().call(body, context, basicInfo!.CREATE_POST).then((value) {
+    Calls().call(body, context, basicInfo!.createPost).then((value) {
       var res = PostCreateResponse.fromJson(value);
       if (res.statusCode ==basicInfo!.statusCode) {
         Navigator.pop(context, true);

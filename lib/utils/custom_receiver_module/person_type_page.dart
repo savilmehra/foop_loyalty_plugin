@@ -126,7 +126,7 @@ class _PersonTypePage extends State<PersonTypePage> {
       "searchVal": searchVal,
       "app_type": "FOOPWORKS"
     });
-    var value = await Calls().call(body, context, basicInfo!.PERSON_LIST);
+    var value = await Calls().call(body, context, basicInfo!.personList);
 
     var data = PersonTypeList.fromJson(value);
 

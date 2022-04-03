@@ -30,7 +30,7 @@ class EmptyWidget extends StatelessWidget {
               decoration: BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.contain,
-                    image: AssetImage('packages/loyalty_foop/assets/appimages/empty.png',),
+                    image: AssetImage('assets/appimages/empty.png',),
                   )),
             ),
             Padding(

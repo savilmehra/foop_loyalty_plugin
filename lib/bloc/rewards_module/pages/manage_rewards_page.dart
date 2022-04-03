@@ -39,7 +39,7 @@ class ManageRewardsPage extends StatefulWidget {
   String googleTranslationKey;
   String userName;
   String userImage;
-  String BASE_URL_WITHOUT_HTTP;
+  String baseUrlWithoutHttp;
   String timeFormat;
   String dateFormat;
   ManageRewardsPage({Key? key,
@@ -51,7 +51,7 @@ class ManageRewardsPage extends StatefulWidget {
     required this.businessId,
     required this.userName,
     required this.userImage,
-    required this.BASE_URL_WITHOUT_HTTP,
+    required this.baseUrlWithoutHttp,
     required this.timeFormat,
     required this.dateFormat
 
@@ -76,14 +76,14 @@ class _ManageRewardsPage extends State<ManageRewardsPage> {
   setBasicData()
   async {
     basicInfo?.appLanguageCode = widget.appLanguageCode;
-    basicInfo?.GOOGLE_TRANSLATION_KEY = widget.googleTranslationKey;
+    basicInfo?.googleTransltionKey = widget.googleTranslationKey;
     basicInfo?.token = widget.token;
     basicInfo?.baseUrl = widget.baseUrl;
     basicInfo?.userId = widget.userId;
     basicInfo?.businessId = widget.businessId;
     basicInfo?.userName = widget.userName;
     basicInfo?.userImage = widget.userImage;
-    basicInfo?.BASE_URL_WITHOUT_HTTP = widget.BASE_URL_WITHOUT_HTTP;
+    basicInfo?.baseUrlWithoutHttp = widget.baseUrlWithoutHttp;
     basicInfo?.timeFormat = widget.timeFormat;
     basicInfo?.dateFormat = widget.dateFormat;
 
@@ -153,7 +153,7 @@ class _ManageRewardsPage extends State<ManageRewardsPage> {
                   padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                   child: ListTile(
                     leading: Image.asset(
-                      'packages/loyalty_foop/assets/appimages/change-password.png',
+                      'assets/appimages/change-password.png',
                       width: 36,
                       height: 36,
                     ),
@@ -199,7 +199,7 @@ class _ManageRewardsPage extends State<ManageRewardsPage> {
                   padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                   child: ListTile(
                     leading: Image.asset(
-                      'packages/loyalty_foop/assets/appimages/change-password.png',
+                      'assets/appimages/change-password.png',
                       width: 36,
                       height: 36,
                     ),
@@ -245,7 +245,7 @@ class _ManageRewardsPage extends State<ManageRewardsPage> {
                   padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                   child: ListTile(
                     leading: Image.asset(
-                      'packages/loyalty_foop/assets/appimages/change-password.png',
+                      'assets/appimages/change-password.png',
                       width: 36,
                       height: 36,
                     ),
@@ -288,7 +288,7 @@ class _ManageRewardsPage extends State<ManageRewardsPage> {
                   padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                   child: ListTile(
                     leading: Image.asset(
-                      'packages/loyalty_foop/assets/appimages/change-password.png',
+                      'assets/appimages/change-password.png',
                       width: 36,
                       height: 36,
                     ),
@@ -320,7 +320,7 @@ class _ManageRewardsPage extends State<ManageRewardsPage> {
                     padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                     child: ListTile(
                       leading: Image.asset(
-                        'packages/loyalty_foop/assets/appimages/account-settings.png',
+                        'assets/appimages/account-settings.png',
                         width: 36,
                         height: 36,
                       ),
@@ -362,7 +362,7 @@ class _ManageRewardsPage extends State<ManageRewardsPage> {
                     padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                     child: ListTile(
                       leading: Image.asset(
-                        'packages/loyalty_foop/assets/appimages/account-settings.png',
+                        'assets/appimages/account-settings.png',
                         width: 36,
                         height: 36,
                       ),
@@ -400,7 +400,7 @@ class _ManageRewardsPage extends State<ManageRewardsPage> {
                     padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                     child: ListTile(
                       leading: Image.asset(
-                        'packages/loyalty_foop/assets/appimages/account-settings.png',
+                        'assets/appimages/account-settings.png',
                         width: 36,
                         height: 36,
                       ),
@@ -441,7 +441,7 @@ class _ManageRewardsPage extends State<ManageRewardsPage> {
                     padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                     child: ListTile(
                       leading: Image.asset(
-                        'packages/loyalty_foop/assets/appimages/account-settings.png',
+                        'assets/appimages/account-settings.png',
                         width: 36,
                         height: 36,
                       ),

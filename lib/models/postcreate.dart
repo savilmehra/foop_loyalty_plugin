@@ -1,8 +1,7 @@
-
-
 class PostCreatePayload {
   int? postId;
   int? id;
+  int? rewardsId;
   int? originalPsPostMainId;
   String? postOwnerType;
   int? postOwnerTypeId;
@@ -21,6 +20,7 @@ class PostCreatePayload {
   List<String?>? postSubTypes;
   String? sourceLink;
   String? postColor;
+
   //=============================lesson data
   String? coverImage;
   String? lessonType;
@@ -33,16 +33,14 @@ class PostCreatePayload {
 
   List<PostCreatePayload>? listOfLessons;
 
-
   PostCreatePayload(
       {this.listOfLessons,
-
+      this.rewardsId,
       this.disciplineList,
       this.subjectsList,
       this.classesList,
       this.programmesList,
       this.affiliatedList,
-
       this.lessonType,
       this.originalPsPostMainId,
       this.postOwnerType,
@@ -64,12 +62,9 @@ class PostCreatePayload {
       this.postSubTypes,
       this.sourceLink,
       this.coverImage,
-
       this.id});
 
   PostCreatePayload.fromJson(Map<String, dynamic> json) {
-
-
     if (json['discipline'] != null) {
       disciplineList = []; //Discipline>();
       json['discipline'].forEach((v) {
@@ -435,7 +430,6 @@ class CustomReceivers extends PostRecipientDetailItem {
   List<String?>? recipentType;
   List<String?>? postalCodes;
 
-
   List<String?>? personTypesNames;
   List<String?>? loyaltyTypesNames;
   List<String?>? countryCodesNames;
@@ -445,17 +439,13 @@ class CustomReceivers extends PostRecipientDetailItem {
   List<String?>? postalCodesNames;
 
   CustomReceivers(
-      {
-        this.personTypesNames,
-        this.loyaltyTypesNames,
-        this.countryCodesNames,
-        this.stateCodesNames,
-        this.cityCodesNames,
-        this.postalCodesNames,
-
-
-
-        this.type,
+      {this.personTypesNames,
+      this.loyaltyTypesNames,
+      this.countryCodesNames,
+      this.stateCodesNames,
+      this.cityCodesNames,
+      this.postalCodesNames,
+      this.type,
       this.id,
       this.gender,
       this.recipentType,
@@ -585,10 +575,13 @@ class PostCreateResponse {
 
 class PostResponseModel {
   int? id;
+
   PostResponseModel({this.id});
+
   PostResponseModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
   }
+
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['id'] = this.id;

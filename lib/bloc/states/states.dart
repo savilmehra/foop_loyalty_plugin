@@ -14,6 +14,11 @@ class LoadingStatePagination extends MainState {
 class Loaded extends MainState {
   int? cash;
   int? coins;
+
+  int? giftCash;
+  int? giftCoin;
+  int? startEpoch;
+  int? endEpoch;
   int? redemptionPercentage;
   int? redemptionCoins;
   bool isLastPage;
@@ -24,17 +29,14 @@ class Loaded extends MainState {
       {required this.list,
       this.isLastPage = false,
       this.selectedItem,
-
-
-
-
+      this.giftCash,
+      this.giftCoin,
+      this.startEpoch,
+      this.endEpoch,
       this.coins,
       this.cash,
-
       this.redemptionPercentage,
-        this.redemptionCoins
-
-      });
+      this.redemptionCoins});
 
   List<dynamic> getList() => list;
 }

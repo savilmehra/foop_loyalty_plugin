@@ -32,7 +32,7 @@ class appEmptyWidget extends StatelessWidget {
                 fit: BoxFit.contain,
                 image: AssetImage(assetImage != null
                     ? assetImage!
-                    : 'packages/loyalty_foop/assets/appimages/empty.png'),
+                    : 'assets/appimages/empty.png'),
               )),
             ),
             Padding(
@@ -132,7 +132,7 @@ class appEmptyWidgetForAudio extends StatelessWidget {
                 fit: BoxFit.contain,
                 image: AssetImage(assetImage != null
                     ? assetImage!
-                    : 'packages/loyalty_foop/assets/appimages/avatar-default.png'),
+                    : 'assets/appimages/avatar-default.png'),
               )),
             ),
             Padding(
@@ -198,7 +198,7 @@ class appEmptyWidgetForAudioList extends StatelessWidget {
                 fit: BoxFit.contain,
                 image: AssetImage(assetImage != null
                     ? assetImage!
-                    : 'packages/loyalty_foop/assets/appimages/avatar-default.png'),
+                    : 'assets/appimages/avatar-default.png'),
               )),
             ),
             Padding(
@@ -255,7 +255,7 @@ class appEmptyWidgetForAskQuestions extends StatelessWidget {
               decoration: BoxDecoration(
                   image: DecorationImage(
                 fit: BoxFit.contain,
-                image: AssetImage('packages/loyalty_foop/assets/appimages/ask_empty.png',),
+                image: AssetImage('assets/appimages/ask_empty.png',),
               )),
             ),
             Padding(
@@ -296,7 +296,7 @@ class appEmptyWidgetForBlogList extends StatelessWidget {
               decoration: BoxDecoration(
                   image: DecorationImage(
                 fit: BoxFit.contain,
-                image: AssetImage('packages/loyalty_foop/assets/appimages/blog_empty.png',),
+                image: AssetImage('assets/appimages/blog_empty.png',),
               )),
             ),
             Padding(
@@ -337,7 +337,7 @@ class appEmptyWidgetForNews extends StatelessWidget {
               decoration: BoxDecoration(
                   image: DecorationImage(
                 fit: BoxFit.contain,
-                image: AssetImage('packages/loyalty_foop/assets/appimages/news_empty.png',),
+                image: AssetImage('assets/appimages/news_empty.png',),
               )),
             ),
             Padding(
@@ -378,7 +378,7 @@ class appEmptyWidgetForPolls extends StatelessWidget {
               decoration: BoxDecoration(
                   image: DecorationImage(
                 fit: BoxFit.contain,
-                image: AssetImage('packages/loyalty_foop/assets/appimages/polling_empty.png',),
+                image: AssetImage('assets/appimages/polling_empty.png',),
               )),
             ),
             Padding(
@@ -419,7 +419,7 @@ class appEmptyWidgetForNotice extends StatelessWidget {
               decoration: BoxDecoration(
                   image: DecorationImage(
                 fit: BoxFit.contain,
-                image: AssetImage('packages/loyalty_foop/assets/appimages/notice_board_empty.png',),
+                image: AssetImage('assets/appimages/notice_board_empty.png',),
               )),
             ),
             Padding(
@@ -462,7 +462,7 @@ class appEmptyWidgetForGeneral extends StatelessWidget {
               decoration: BoxDecoration(
                   image: DecorationImage(
                 fit: BoxFit.contain,
-                image: AssetImage('packages/loyalty_foop/assets/appimages/empty.png',),
+                image: AssetImage('assets/appimages/empty.png',),
               )),
             ),
             messages != null
@@ -528,7 +528,7 @@ class appEmptyWidgetForBookmark extends StatelessWidget {
               decoration: BoxDecoration(
                   image: DecorationImage(
                 fit: BoxFit.contain,
-                image: AssetImage('packages/loyalty_foop/assets/appimages/bookmark_empty.png',),
+                image: AssetImage('assets/appimages/bookmark_empty.png',),
               )),
             ),
             Padding(
@@ -544,7 +544,7 @@ class appEmptyWidgetForBookmark extends StatelessWidget {
                             text:  AppLocalizations.of(context)!.translate('bookmark_empty_1')),
                         WidgetSpan(
                             child: Image.asset(
-                          'packages/loyalty_foop/assets/appimages/bookmark.png',
+                          'assets/appimages/bookmark.png',
                           width: 24,
                           height: 24,
                         )),

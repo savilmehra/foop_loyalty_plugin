@@ -1,6 +1,6 @@
 name: foop_loyalty_plugin
 description: A loyalty management tool
-version: 0.1.1
+version: 0.6.1
 homepage: https://github.com/savilmehra/foop_loyalty_plugin
 
 environment:
@@ -56,8 +56,8 @@ dev_dependencies:
 flutter:
 
   assets:
-    - packages/loyalty_foop/packages/loyalty_foop/assets/appimages/
-    - packages/loyalty_foop/assets/lang/
+    - assets/appimages/
+    - assets/lang/
 
   # This section identifies this Flutter project as a plugin project.
   # The 'pluginClass' and Android 'package' identifiers should not ordinarily
@@ -66,10 +66,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.example.loyalty_foop
-        pluginClass: LoyaltyFoopPlugin
+        package: foop.loyalty.plugin.foop_loyalty_plugin
+        pluginClass: FoopLoyaltyPlugin
       ios:
-        pluginClass: LoyaltyFoopPlugin
+        pluginClass: FoopLoyaltyPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

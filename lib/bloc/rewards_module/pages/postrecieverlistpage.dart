@@ -96,13 +96,11 @@ class _PostReceiverListPage extends State<PostReceiverListPage> {
             actions: [
               appTextButton(
                 onPressed: () {
-                  if (_selectedList.isNotEmpty ||
-                      postRecipientDetailItem != null) {
-                    if (widget.list != null && widget.list!.isNotEmpty) {
-                      payload!.postRecipientType = postCreatePayload.postRecipientType;
-                      payload!.postRecipientDetails = postCreatePayload.postRecipientDetails;
+                  if (_selectedList.isNotEmpty || postRecipientDetailItem != null) {
+                      payload!.postRecipientType = getTypeCode();
+                      payload!.postRecipientDetails =getDetails();
                       Navigator.of(context).pop({'payload': payload});
-                    }
+
                   } else {
                     ToastBuilder().showToast(
                         AppLocalizations.of(context)!
@@ -181,7 +179,7 @@ class _PostReceiverListPage extends State<PostReceiverListPage> {
           ? widget.list![0]!.postType
           : this.payload!.postType;
       var data = jsonEncode(payload);
-      var value = await Calls().call(data, context, basicInfo!.POST_RECEIVER_LIST);
+      var value = await Calls().call(data, context, basicInfo!.postReceiversList);
       return PostReceiverResponse.fromJson(value);
     }
   }
@@ -337,13 +335,6 @@ class _PostReceiverListPage extends State<PostReceiverListPage> {
     }
 
     return typeCode;
-  }
-
-  ///method returns the payload to be uploaded to the server.
-  PostCreatePayload getPayload() {
-    postCreatePayload.postRecipientType = getTypeCode();
-    postCreatePayload.postRecipientDetails = getDetails();
-    return postCreatePayload;
   }
 
   /// This matches the selected list recipient type with the specific scenario to add it to the details for server upload.

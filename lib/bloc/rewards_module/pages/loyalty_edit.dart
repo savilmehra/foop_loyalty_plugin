@@ -7,6 +7,7 @@ import 'package:foop_loyalty_plugin/bottom_sheets/loyalty_add_edit.dart';
 import 'package:foop_loyalty_plugin/models/base_response.dart';
 import 'package:foop_loyalty_plugin/models/loyaltyPayload.dart';
 import 'package:foop_loyalty_plugin/models/loyalty_list_response.dart';
+
 import 'package:foop_loyalty_plugin/utils/CustomPaginator.dart';
 import 'package:foop_loyalty_plugin/utils/appAvatar.dart';
 import 'package:foop_loyalty_plugin/utils/basicInfo.dart';
@@ -113,7 +114,7 @@ class LoyaltyEditPageState extends State<LoyaltyEditPage> {
       "app_type": "FOOPWORKS",
       "entity_id": basicInfo!.businessId
     });
-    var value = await Calls().call(body, context, basicInfo!.LOYALTY_LIST);
+    var value = await Calls().call(body, context, basicInfo!.loyaltyList);
     return LoyaltyListResponse.fromJson(value);
   }
 
@@ -203,7 +204,7 @@ class LoyaltyEditPageState extends State<LoyaltyEditPage> {
 
   void saveData(LoyaltyCreatePayload value) {
     Calls()
-        .call(jsonEncode(value), context, basicInfo!.LOYALTY_TYPE_ADD)
+        .call(jsonEncode(value), context, basicInfo!.loyaltyTypeAdd)
         .then((value) {
       var res = BaseResponse.fromJson(value);
       if (res.statusCode == basicInfo!.statusCode) {

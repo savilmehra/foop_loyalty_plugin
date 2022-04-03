@@ -126,7 +126,7 @@ class _PersonTypePage extends State<LoyaltyTypeListPage> {
       "app_type": "FOOPWORKS",
       "entity_id": basicInfo!.businessId
     });
-    var value = await Calls().call(body, context, basicInfo!.LOYALTY_LIST);
+    var value = await Calls().call(body, context, basicInfo!.loyaltyList);
 
     var data = LoyaltyListResponse.fromJson(value);
 

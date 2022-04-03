@@ -135,7 +135,7 @@ class UpdateLoyaltySheetState extends State<UpdateLoyaltySheet>
                       decoration: BoxDecoration(
                           color: HexColor(AppColors.appColorBackground),
                           image: DecorationImage(
-                              image: isEdit?CachedNetworkImageProvider(widget.item!.imageUrl!=null?basicInfo!.baseUrl+widget.item!.imageUrl!:""):(_thumbnailUrl!=null?CachedNetworkImageProvider(basicInfo!.baseUrl+_thumbnailUrl!):AssetImage('packages/loyalty_foop/assets/appimages/grey_bg.png',)) as ImageProvider<Object>
+                              image: isEdit?CachedNetworkImageProvider(widget.item!.imageUrl!=null?basicInfo!.baseUrl+widget.item!.imageUrl!:""):(_thumbnailUrl!=null?CachedNetworkImageProvider(basicInfo!.baseUrl+_thumbnailUrl!):AssetImage('assets/appimages/grey_bg.png',)) as ImageProvider<Object>
                           )
                       ),
                       child: isEdit?widget.item!.imageUrl!=null?Text(''):Center(

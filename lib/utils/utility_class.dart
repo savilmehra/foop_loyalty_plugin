@@ -38,7 +38,7 @@ class Utility {
       'resolution': resolution.type,
       'service_type': service_type.type
     };
-    var uri = Uri.https(basicInfo!.BASE_URL_WITHOUT_HTTP, basicInfo!.DYNAMIC_IMAGE_URL,
+    var uri = Uri.https(basicInfo!.baseUrlWithoutHttp, basicInfo!.dynamicImageUrl,
         queryParameters)
         .toString();
 
@@ -187,11 +187,11 @@ class Utility {
       "source": input_lan_code,
       "target": output_lan_code,
       "format": type,
-      "key": basicInfo!.GOOGLE_TRANSLATION_KEY,
+      "key": basicInfo!.googleTransltionKey,
     });
 
     var res = await Calls().call(body, context,
-        basicInfo!.TRANSLATE + "?key=" +basicInfo!.GOOGLE_TRANSLATION_KEY);
+        basicInfo!.translate + "?key=" +basicInfo!.googleTransltionKey);
     var response = TranslateResponse.fromJson(res);
     return response.data!.translations![0].translatedText;
   }

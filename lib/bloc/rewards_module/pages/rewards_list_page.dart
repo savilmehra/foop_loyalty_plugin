@@ -6,6 +6,7 @@ import 'package:foop_loyalty_plugin/bloc/cubits/cubit_main.dart';
 import 'package:foop_loyalty_plugin/bloc/rewards_module/pages/postcreatepage.dart';
 import 'package:foop_loyalty_plugin/bloc/states/main_state.dart';
 import 'package:foop_loyalty_plugin/bloc/states/states.dart';
+import 'package:foop_loyalty_plugin/models/create_post_payload.dart';
 import 'package:foop_loyalty_plugin/models/postcreate.dart';
 import 'package:foop_loyalty_plugin/models/postlist.dart';
 import 'package:foop_loyalty_plugin/models/welcomeMessagesListResponse.dart';
@@ -51,7 +52,7 @@ class RewardsListPageState extends State<RewardsListPage> {
     setupScrollController();
     WidgetsBinding.instance!.addPostFrameCallback((_) {
       BlocProvider.of<CubitMain>(context).loadPage(
-          getBody(), context, basicInfo!.LOYALTY_PROGRAM_LIST, getData);
+          getBody(), context, basicInfo!.loyaltyProgramList, getData);
     });
 
     super.initState();
@@ -148,7 +149,7 @@ class RewardsListPageState extends State<RewardsListPage> {
     return RewardsWidget(
       item: item,
       deleteCallBack: (id) {
-        createPost(null, id, "deleted");
+       // createPost(null, id, "deleted");
       },
       editCallBack: (item) {
         Navigator.of(context)
@@ -163,8 +164,8 @@ class RewardsListPageState extends State<RewardsListPage> {
                       isEdit: true,
                     )))
             .then((value) => {
-                  if (value != null && value['postData'] != null)
-                    createPost(value['postData'], item?.id, "active")
+                  if (value != null && value['payload'] != null)
+                    createPost(value['payload'])
                 });
       },
     );
@@ -175,11 +176,11 @@ class RewardsListPageState extends State<RewardsListPage> {
             context,
             MaterialPageRoute(
               builder: (context) => BlocProvider(
-                  create: (_) => CubitMain(), child: LoyaltyTypePageNew()),
+                  create: (_) => CubitMain(), child: const LoyaltyTypePageNew()),
             ))
         .then((value) => {
-              if (value != null && value['postData'] != null)
-                createPost(null, null, "active")
+              if (value != null && value['payload'] != null)
+                createPost(value['payload'])
             });
   }
 
@@ -202,29 +203,19 @@ class RewardsListPageState extends State<RewardsListPage> {
         if (scrollController.position.pixels != 0) {
           if (!isLastPage)
             BlocProvider.of<CubitMain>(ctx).loadPage(
-                getBody(), ctx, basicInfo!.LOYALTY_TYPE_LIST, getData);
+                getBody(), ctx, basicInfo!.loyaltyTypeList, getData);
         }
       }
     });
   }
 
-  void createPost(PostCreatePayload? payload, int? id, String status) {
+  void createPost(CreateRewardPayload? payload) {
     var bodyRefresh = jsonEncode({
       "business_id": basicInfo!.businessId,
       "applicable_to": widget.messageTo,
       "message_type": widget.type
     });
-    var body = jsonEncode({
-      "id": id,
-      "status": status,
-      "business_id": basicInfo!.businessId,
-      "applicable_to": widget.messageTo,
-      "message_type": widget.type,
-      "message_details": {
-        "media_details": payload?.mediaDetails,
-        "content_meta": payload?.contentMeta
-      }
-    });
+    var body = jsonEncode(payload);
     context.read<CubitMain>().createPost(body, bodyRefresh, context);
   }
 }

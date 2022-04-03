@@ -138,7 +138,7 @@ class _SelectCountryPage extends State<SelectCountryPage> {
   Future<PersonTypeList?> getRoles(int page) async {
     final body = jsonEncode(
         {"business_id": 0, "searchVal": searchVal, "app_type": "FOOPWORKS"});
-    var value = await Calls().call(body, context, basicInfo!.PERSON_LIST);
+    var value = await Calls().call(body, context, basicInfo!.personList);
 
     if (value != null) {
       var data = PersonTypeList.fromJson(value);
@@ -170,7 +170,7 @@ class _SelectCountryPage extends State<SelectCountryPage> {
     payload.businessId = basicInfo!.businessId;
     var data = jsonEncode(payload);
     var value =
-        await Calls().call(data, context, basicInfo!.COUNTRY_LIST_RECEIVERS);
+        await Calls().call(data, context, basicInfo!.countryList);
     var res = CountryStateResponse.fromJson(value);
 
     if (widget.type == "Country" &&

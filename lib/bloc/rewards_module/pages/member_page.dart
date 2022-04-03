@@ -355,7 +355,7 @@ class CommonListState extends State<MemberPage>
       "business_id":""// widget.businessId=="
     });
 
-    var res = await Calls().call(body, context, basicInfo!.PARTNER_LIST);
+    var res = await Calls().call(body, context, basicInfo!.partnerList);
 
     return PersonListResponse.fromJson(res);
   }
