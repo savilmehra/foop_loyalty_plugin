@@ -133,7 +133,7 @@ class appAttachmentsState extends State<appAttachments> {
                                 child: Container(
                                   height: 18,
                                   width: 18,
-                                  child: Image.asset('assets/appimages/cancel.png',fit: BoxFit.cover,
+                                  child: Image.asset('packages/foop_loyalty_plugin/assets/appimages/cancel.png',fit: BoxFit.cover,
                                   ),
                                 )
                             ),

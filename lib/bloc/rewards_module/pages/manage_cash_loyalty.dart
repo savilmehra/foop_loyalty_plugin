@@ -87,7 +87,7 @@ class _ManageCashLoyalty extends State<ManageCashLoyalty> {
                 child: Padding(
                   padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                   child: ListTile(
-                    leading: Image.asset('assets/appimages/change-password.png',width: 36,height: 36,),
+                    leading: Image.asset('packages/foop_loyalty_plugin/assets/appimages/change-password.png',width: 36,height: 36,),
                     title: Text(
                       AppLocalizations.of(context!)!
                           .translate("permitted_s"),
@@ -125,7 +125,7 @@ class _ManageCashLoyalty extends State<ManageCashLoyalty> {
                 child: Padding(
                   padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                   child: ListTile(
-                    leading: Image.asset('assets/appimages/change-password.png',width: 36,height: 36,),
+                    leading: Image.asset('packages/foop_loyalty_plugin/assets/appimages/change-password.png',width: 36,height: 36,),
                     title: Text(
                       AppLocalizations.of(context!)!
                           .translate("app_s"),
@@ -163,7 +163,7 @@ class _ManageCashLoyalty extends State<ManageCashLoyalty> {
                 child: Padding(
                   padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                   child: ListTile(
-                    leading: Image.asset('assets/appimages/change-password.png',width: 36,height: 36,),
+                    leading: Image.asset('packages/foop_loyalty_plugin/assets/appimages/change-password.png',width: 36,height: 36,),
                     title: Text(
                       AppLocalizations.of(context!)!
                           .translate("df_d"),
@@ -201,7 +201,7 @@ class _ManageCashLoyalty extends State<ManageCashLoyalty> {
                 child: Padding(
                   padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                   child: ListTile(
-                    leading: Image.asset('assets/appimages/change-password.png',width: 36,height: 36,),
+                    leading: Image.asset('packages/foop_loyalty_plugin/assets/appimages/change-password.png',width: 36,height: 36,),
                     title: Text(
                       AppLocalizations.of(context!)!
                           .translate("prt_evn"),
@@ -234,7 +234,7 @@ class _ManageCashLoyalty extends State<ManageCashLoyalty> {
                   child: Padding(
                     padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                     child: ListTile(
-                      leading: Image.asset('assets/appimages/account-settings.png',width: 36,height: 36,),
+                      leading: Image.asset('packages/foop_loyalty_plugin/assets/appimages/account-settings.png',width: 36,height: 36,),
                       title: Text(
                         AppLocalizations.of(context!)!
                             .translate("view_ledger"),

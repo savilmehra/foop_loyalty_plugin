@@ -1,0 +1,191 @@
+{
+  "rows": [
+    {
+      "title": "position_0"
+
+    },
+    {
+      "title": "position_1"
+
+    },
+    {
+      "title": "position_2"
+
+    },
+    {
+      "title": "position_3"
+
+    },
+    {
+      "title": "Communication",
+      "data": [
+        {
+          "title": "Business Email",
+          "code": "email",
+          "imageUrl": "assets/appimages/menu-email.png",
+          "tag": "",
+          "description": "Announcements & circulars in one place",
+          "isTagVisible": false
+        },
+        {
+          "title": "Business Chat",
+          "code": "chat",
+          "imageUrl": "assets/appimages/menu-chat.png",
+          "tag": "",
+          "description": "Chat exclusive for your business",
+          "isTagVisible": false
+        },
+        {
+          "title": "Drop-in Meetings",
+          "code": "talks",
+          "imageUrl": "assets/appimages/menu-audio-chat.png",
+          "tag": "",
+          "description": "Audio-Video-chat while doing anything",
+          "isTagVisible": false
+        }
+      ]
+    },
+    {
+      "title": "Collaborate",
+      "data": [
+        {
+          "title": "Bizdrive",
+          "code": "drive",
+          "imageUrl": "assets/appimages/cloud-drive.png",
+          "tag": "",
+          "description": "Manage your account here",
+          "isTagVisible": false
+        },
+        {
+          "title": "Social Intranet",
+          "code": "intranet",
+          "imageUrl": "assets/appimages/menu-social-intranet.png",
+          "tag": "",
+          "description": "Social network for only your business",
+          "isTagVisible": false
+        },
+        {
+          "title": "Blogs and Articles",
+          "code": "blog",
+          "imageUrl": "assets/appimages/menu-blogging.png",
+          "tag": "",
+          "description": "Read, write & know new things",
+          "isTagVisible": false
+        },
+        {
+          "title": "Ask Questions",
+          "code": "expert",
+          "imageUrl": "assets/appimages/menu-q&a.png",
+          "tag": "",
+          "description": "Ask & get answers immediately",
+          "isTagVisible": false
+        },
+        {
+          "title": "Notice Board",
+          "code": "notice",
+          "imageUrl": "assets/appimages/menu-notice.png",
+          "tag": "",
+          "description": "All circulars in one place",
+          "isTagVisible": false
+        },
+        {
+          "title": "Office News",
+          "code": "news",
+          "imageUrl": "assets/appimages/news.png",
+          "tag": "",
+          "description": "No more complex newsletters",
+          "isTagVisible": false
+        }
+      ]
+    },
+    {
+      "title": "Team",
+      "data": [
+        {
+          "title": "Team",
+          "code": "myteam",
+          "imageUrl": "assets/appimages/menu-team.png",
+          "tag": "",
+          "description": "All your co-workers at one place",
+          "isTagVisible": false
+        },
+        {
+          "title": "Rooms",
+          "code": "room",
+          "imageUrl": "assets/appimages/menu-rooms.png",
+          "tag": "",
+          "description": "Rooms, discuss anything in groups",
+          "isTagVisible": false
+        },
+        {
+          "title": "Polls",
+          "code": "poll",
+          "imageUrl": "assets/appimages/menu-poll.png",
+          "tag": "",
+          "description": "Get honest opinions from team",
+          "isTagVisible": false
+        },
+        {
+          "title": "Training & KB",
+          "code": "lesson",
+          "imageUrl": "assets/appimages/menu-training.png",
+          "tag": "",
+          "description": "Learn everything about your work here",
+          "isTagVisible": false
+        },
+        {
+          "title": "Rewards",
+          "code": "reward",
+          "imageUrl": "assets/appimages/menu-training.png",
+          "tag": "",
+          "description": "Learn everything about your work here",
+          "isTagVisible": false
+        }
+      ]
+    },
+    {
+      "title": "Partner",
+      "data": [
+
+        {
+          "title": "Partners",
+          "code": "partner",
+          "imageUrl": "assets/appimages/handshake.png",
+          "tag": "",
+          "description": "All your partners",
+          "isTagVisible": false
+        },
+        {
+          "title": "Invite Partners",
+          "code": "invite_partner",
+          "imageUrl": "assets/appimages/wedding-invitation.png",
+          "tag": "",
+          "description": "Invite your partners",
+          "isTagVisible": false
+        }
+      ]
+    },
+    {
+      "title": "Others",
+      "data": [
+
+        {
+          "title": "Settings",
+          "code": "settings",
+          "imageUrl": "assets/appimages/menu-settings.png",
+          "tag": "",
+          "description": "Manage your account here",
+          "isTagVisible": false
+        },
+        {
+          "title": "Logout",
+          "code": "logout",
+          "imageUrl": "assets/appimages/menu-logout.png",
+          "tag": "",
+          "description": "You will never want to Logout",
+          "isTagVisible": false
+        }
+      ]
+    }
+  ]
+}

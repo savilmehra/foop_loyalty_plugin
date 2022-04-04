@@ -1,0 +1,105 @@
+{
+  "rows": [
+    {
+      "title": "position_0"
+    },
+    {
+      "title": "position_1"
+    },
+    {
+      "title": "position_2"
+    },
+    {
+      "title": "position_3"
+    },
+    {
+      "title": "இணைந்து",
+      "data": [
+        {
+          "title": "டிராப்-இன் கூட்டங்கள்",
+          "description": "எதையும் செய்யும்போது ஆடியோ-வீடியோ-அரட்டை",
+          "code": "talks",
+          "imageUrl": "assets/appimages/menu-audio-chat.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "பிராண்ட் டிரைவ்",
+          "description": "ஃபூப் டிரைவ்",
+          "code": "drive",
+          "imageUrl": "assets/appimages/cloud-drive.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+
+    {
+      "title": "பயிற்சி மற்றும் நிகழ்வுகள்",
+      "data": [
+        {
+          "title": "பயிற்சி",
+          "description": "உங்கள் வேலையைப் பற்றிய அனைத்தையும் இங்கே அறியவும்",
+          "code": "lesson",
+          "imageUrl": "assets/appimages/menu-training.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "நாட்காட்டி",
+          "description": "நாட்காட்டி",
+          "code": "calendar",
+          "imageUrl": "assets/appimages/calendar.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+
+    {
+      "title": "குழு நிர்வாகம்",
+      "data": [
+        {
+          "title": "குழு",
+          "description": "உங்கள் சக பணியாளர்கள் அனைவரும் ஒரே இடத்தில்",
+          "code": "myteam",
+          "imageUrl": "assets/appimages/menu-team.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "அறைகள்",
+          "description": "அறைகள், குழுக்களாக எதையும் விவாதிக்கவும்",
+          "code": "room",
+          "imageUrl": "assets/appimages/menu-rooms.png",
+          "tag": "",
+
+          "isTagVisible": false
+        }
+
+      ]
+    },
+
+    {
+      "title": "மற்றவைகள்",
+      "data": [
+        {
+          "title": "அமைப்புகள்",
+          "description": "உங்கள் கணக்கை இங்கே நிர்வகிக்கவும்",
+          "code": "settings",
+          "imageUrl": "assets/appimages/menu-settings.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "வெளியேறு",
+          "description": "நீங்கள் ஒருபோதும் வெளியேற விரும்ப மாட்டீர்கள்",
+          "code": "logout",
+          "imageUrl": "assets/appimages/menu-logout.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    }
+  ]
+}

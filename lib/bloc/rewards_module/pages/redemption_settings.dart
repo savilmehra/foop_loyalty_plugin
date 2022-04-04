@@ -134,7 +134,7 @@ class _RedemptionSettingPage extends State<RedemptionSettingPage> {
                   child: Padding(
                     padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                     child: appUserListTile(
-                      iconWidget: Image.asset('assets/appimages/reward.png',width: 36,height: 36,),
+                      iconWidget: Image.asset('packages/foop_loyalty_plugin/assets/appimages/reward.png',width: 36,height: 36,),
                       title: AppLocalizations.of(context!)!
                           .translate("disc_g"),
                         subtitle1: AppLocalizations.of(context!)!
@@ -307,7 +307,7 @@ class _RedemptionSettingPage extends State<RedemptionSettingPage> {
                   child: Padding(
                     padding: EdgeInsets.only(top: 8, bottom: 8, left: 8),
                     child: appUserListTile(
-                      iconWidget: Image.asset('assets/appimages/rewards.png',width: 36,height: 36,),
+                      iconWidget: Image.asset('packages/foop_loyalty_plugin/assets/appimages/rewards.png',width: 36,height: 36,),
                       title: AppLocalizations.of(context!)!
                           .translate("gift_red"),
                       subtitle1: AppLocalizations.of(context!)!

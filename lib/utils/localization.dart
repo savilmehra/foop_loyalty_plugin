@@ -22,7 +22,7 @@ class AppLocalizations {
   Future<bool> load() async {
     prefs = await SharedPreferences.getInstance();
     String jsonString = await rootBundle.loadString(
-        'assets/lang/${prefs!.getString("app_language_code") ?? "en"}.json');
+        'packages/foop_loyalty_plugin/assets/lang/${prefs!.getString("app_language_code") ?? "en"}.json');
     Map<String, dynamic> jsonMap = json.decode(jsonString);
 
     _localizedStrings = jsonMap.map((key, value) {
@@ -35,7 +35,7 @@ class AppLocalizations {
   Future<String> getData() async {
     // Load the language JSON file from the "lang" folder
     String jsonString = await rootBundle
-        .loadString('assets/lang/${locale.languageCode}.json');
+        .loadString('packages/foop_loyalty_plugin/assets/lang/${locale.languageCode}.json');
     // Map<String, dynamic> jsonMap = json.decode(jsonString);
 
     return jsonString;

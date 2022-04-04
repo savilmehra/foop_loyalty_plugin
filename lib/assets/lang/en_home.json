@@ -1,0 +1,114 @@
+{
+  "rows": [
+    {
+      "title": "position_0"
+    },
+    {
+      "title": "position_1"
+    },
+    {
+      "title": "position_2"
+    },
+    {
+      "title": "position_3"
+    },
+    {
+      "title": "Collaboration",
+      "data": [
+        {
+          "title": "Drop-in Meetings",
+          "description": "Audio-video-chat while doing anything",
+          "code": "talks",
+          "imageUrl": "assets/appimages/menu-audio-chat.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "Brand Drive",
+          "description": "Foop drive for documents & material",
+          "code": "drive",
+          "imageUrl": "assets/appimages/cloud-drive.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+
+    {
+      "title": "Training & Events",
+      "data": [
+        {
+          "title": "Training",
+          "description": "Learn everything about your work here",
+          "code": "lesson",
+          "imageUrl": "assets/appimages/menu-training.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "Calendar",
+          "description": "Calendar",
+          "code": "calendar",
+          "imageUrl": "assets/appimages/calendar.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+    {
+      "title": "Support",
+      "data": [
+        {
+          "title": "Helpdesk",
+          "description": "Conversational help-desk system",
+          "code": "helpdesk",
+          "imageUrl": "assets/appimages/help-desks.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+    {
+      "title": "Team Management",
+      "data": [
+        {
+          "title": "Team",
+          "description": "All your co-workers at one place",
+          "code": "myteam",
+          "imageUrl": "assets/appimages/menu-team.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "Rooms",
+          "description": "Rooms, discuss anything in groups",
+          "code": "room",
+          "imageUrl": "assets/appimages/menu-rooms.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    },
+    {
+      "title": "Others",
+      "data": [
+        {
+          "title": "Settings",
+          "description": "Manage your account here",
+          "code": "settings",
+          "imageUrl": "assets/appimages/menu-settings.png",
+          "tag": "",
+          "isTagVisible": false
+        },
+        {
+          "title": "Logout",
+          "description": "You will never want to logout",
+          "code": "logout",
+          "imageUrl": "assets/appimages/menu-logout.png",
+          "tag": "",
+          "isTagVisible": false
+        }
+      ]
+    }
+  ]
+}

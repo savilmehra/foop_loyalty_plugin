@@ -113,14 +113,14 @@ RoomButtons{
   }
 
   Widget get moderatorImage{
-    return Image.asset('assets/appimages/moderator.png',width: 12,height: 12,);
+    return Image.asset('packages/foop_loyalty_plugin/assets/appimages/moderator.png',width: 12,height: 12,);
   }
   Widget get verifiedImage{
-    return Image.asset('assets/appimages/check.png',width: 16,height: 16,);
+    return Image.asset('packages/foop_loyalty_plugin/assets/appimages/check.png',width: 16,height: 16,);
   }
 
   Widget getmoderatorImage(Size size){
-    return Image.asset('assets/appimages/moderator.png',width: 12,height: 12,);
+    return Image.asset('packages/foop_loyalty_plugin/assets/appimages/moderator.png',width: 12,height: 12,);
   }
 
   Widget get exitButton {

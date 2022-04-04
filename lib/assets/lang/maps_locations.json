@@ -1,0 +1,76 @@
+{
+  "markers": [
+    {
+      "name": "Infosys",
+      "latitude": 28.686622,
+      "longitude": 77.184649,
+      "image_url": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1415386231/utypaslbyxwfuwhfdzxd.png"
+    },
+    {
+      "name": "Axis bank",
+      "latitude": 28.682792,
+      "longitude":77.187103,
+      "image_url":"https://www.cloudera.com/content/dam/www/marketing/images/logos/customers/axis-bank.png"
+    },
+    {
+      "name": "Studio 17teen",
+      "latitude": 28.683854,
+      "longitude":77.182985,
+      "image_url":"https://content3.jdmagicbox.com/comp/delhi/n2/011pxx11.xx11.191228075327.v1n2/catalogue/studio17-ashok-vihar-delhi-salons-pll6mr9028-250.jpg"
+    },
+    {
+      "name": "Planet Travel",
+      "latitude": 28.688938,
+      "longitude":77.184148,
+      "image_url":"https://image.shutterstock.com/image-vector/planet-travel-logo-260nw-344274143.jpg"
+    },
+    {
+      "name": "Tandoori corner",
+      "latitude": 28.690322,
+      "longitude":77.182421,
+      "image_url":"https://content3.jdmagicbox.com/comp/thane/q9/022pxx22.xx22.190729072732.b9q9/catalogue/tandoor-s-corner-ulhasnagar-no-4-thane-north-indian-delivery-restaurants-mdzokn8rf0.jpg"
+    },
+    {
+      "name": "Madhya Pradesh branch",
+      "latitude": 22.9734,
+      "longitude":78.6569,
+      "image_url":"https://www.cloudera.com/content/dam/www/marketing/images/logos/customers/axis-bank.png"
+    },
+    {
+      "name": "Mumbai branch",
+      "latitude": 19.0538,
+      "longitude":72.9355,
+      "image_url":"https://www.cloudera.com/content/dam/www/marketing/images/logos/customers/axis-bank.png"
+    },
+    {
+      "name": "Jaipur branch",
+      "latitude": 26.9124,
+      "longitude":75.7873,
+      "image_url":"https://www.cloudera.com/content/dam/www/marketing/images/logos/customers/axis-bank.png"
+    },
+    {
+      "name": "Borivali branch",
+      "latitude": 19.228825,
+      "longitude":72.854118,
+      "image_url":"https://www.cloudera.com/content/dam/www/marketing/images/logos/customers/axis-bank.png"
+    },
+    {
+      "name": "Churchgate branch",
+      "latitude": 19.218825,
+      "longitude":72.864118,
+      "image_url":"https://www.cloudera.com/content/dam/www/marketing/images/logos/customers/axis-bank.png"
+    },
+    {
+      "name": "Powai branch",
+      "latitude": 19.208825,
+      "longitude":72.874118,
+      "image_url":"https://www.cloudera.com/content/dam/www/marketing/images/logos/customers/axis-bank.png"
+    },
+    {
+      "name": "Dadar branch",
+      "latitude": 19.238825,
+      "longitude":72.844118,
+      "image_url":"https://www.cloudera.com/content/dam/www/marketing/images/logos/customers/axis-bank.png"
+    }
+  ]
+}
